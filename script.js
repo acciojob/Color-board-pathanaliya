@@ -1,27 +1,14 @@
-//your JS code here. If required.
- const container = document.getElementById("container");
-    const colors = ["#e74c3c", "#8e44ad", "#3498db", "#27ae60", "#f39c12", "#d35400", "#1abc9c", "#9b59b6"];
-
-    for (let i = 0; i < 800; i++) {
-      const square = document.createElement("div");
-      square.classList.add("square");
-
-      square.addEventListener("mouseover", () => setColor(square));
-      square.addEventListener("mouseleave", () => removeColor(square));
-
-      container.appendChild(square);
-    }
-
-    function setColor(element) {
-      const color = getRandomColor();
-      element.style.backgroundColor = color;
-    }
-
-   function removeColor(element) {
-  element.style.backgroundColor = "rgb(29, 29, 29)";
+let container = document.querySelector('.container');
+for (let i = 0; i < 800; i++) {
+	let square = document.createElement('div');
+	square.classList.add('square');
+	square.addEventListener('mouseover',()=>{
+		square.style.backgroundColor = "greenyellow";
+		square.style.transition = "none";
+	})
+	square.addEventListener('mouseout',()=>{
+		square.style.backgroundColor = "rgb(29, 29, 29)";
+		square.style.transition = "background-color 1s ease";
+	})
+	container.appendChild(square);
 }
-
-
-    function getRandomColor() {
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
