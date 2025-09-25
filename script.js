@@ -19,8 +19,8 @@
 
     function removeColor(element) {
       setTimeout(() => {
-        element.style.backgroundColor = "#1d1d1d";
-      }, 1000); // reset after 1s
+        element.style.backgroundColor = "rgb(29,29, 29)";
+      }, 1000); 
     }
 
     function getRandomColor() {
