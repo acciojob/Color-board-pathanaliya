@@ -17,11 +17,10 @@
       element.style.backgroundColor = color;
     }
 
-    function removeColor(element) {
-      setTimeout(() => {
-        element.style.backgroundColor = "rgb(29,29, 29)";
-      }, 1000); 
-    }
+   function removeColor(element) {
+  element.style.backgroundColor = "rgb(29, 29, 29)";
+}
+
 
     function getRandomColor() {
       return colors[Math.floor(Math.random() * colors.length)];
